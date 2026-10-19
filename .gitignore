@@ -1,0 +1,18 @@
+# Virtual environment
+.venv/
+
+# Tasks output file (created at runtime, may contain personal data)
+tasks.json
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Test cache
+.pytest_cache/
+
+# Environment variables (never commit secrets)
+.env
+
+# Setuptools build artifacts
+*.egg-info/
