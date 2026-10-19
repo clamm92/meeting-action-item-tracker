@@ -46,7 +46,7 @@ Do the sub-tasks one at a time, in order. Wait for the user's OK after each one.
   2. Write `notes.py` with `read_note()`.
   3. Write `tests/test_notes.py` for the read cases in design section 9.
 - **Relevant context:** `src/action_tracker/notes.py`, `notes/`, design sections 5, 9, 12.
-- **Status:** [ ] pending
+- **Status:** [x] done
 
 ## 3. Save tool logic
 
@@ -56,7 +56,17 @@ Do the sub-tasks one at a time, in order. Wait for the user's OK after each one.
   1. Write `tasks.py` with `save_items()`.
   2. Write `tests/test_tasks.py` for the save cases in design section 9.
 - **Relevant context:** `src/action_tracker/tasks.py`, design sections 6, 7, 9.
-- **Status:** [ ] pending
+- **Status:** [x] done
+
+### Notes for sub-task 4
+
+- `tasks.py` exposes `save_items(items, approved=False, tasks_file=None)` and `TasksError`. It returns `{"saved": n, "total_in_file": m}`.
+- `notes.py` exposes `read_note(filename, notes_dir=None)` and `NoteError`.
+- Both errors carry messages that are safe to show to users. The MCP wrapper should pass `str(error)` back and nothing else.
+- Settings: `default_notes_dir()` reads `NOTES_DIR`, and `default_tasks_file()` reads `TASKS_FILE`.
+- `approved` must be the real boolean `True`. The wrapper should pass the value through unchanged and never convert it.
+- `tasks.py` imports `_check_filename` from `notes.py` so `source_file` follows the same path rules.
+- Run tests with `.venv/bin/pytest -q` (56 pass).
 
 ## 4. MCP wrapper
 
