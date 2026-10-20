@@ -77,7 +77,16 @@ Do the sub-tasks one at a time, in order. Wait for the user's OK after each one.
   2. Read settings from environment variables (design section 4).
   3. Send logs to stderr. Never log note text.
 - **Relevant context:** `src/action_tracker/server.py`, design sections 4, 8.
-- **Status:** [ ] pending
+- **Status:** [x] done
+
+### Notes for sub-task 5
+
+- Start the server by hand: `.venv/bin/python -m action_tracker.server` (stdio). It waits silently for MCP messages, which is normal.
+- SDK v2 uses `from mcp.server.mcpserver import MCPServer`. `FastMCP` no longer exists.
+- `approved` is declared as `StrictBool`. A plain `bool` made the SDK turn `"true"`, `1`, and `"yes"` into `True`. `tests/test_server.py` guards this.
+- A real stdio round trip (list tools, read, refused save, approved save) was run with the SDK client and worked. Sub-task 5 can turn it into the optional client script.
+- Inspector command is not yet confirmed. Check the current MCP docs first (plan step 5.1).
+- Run tests with `.venv/bin/pytest -q` (70 pass).
 
 ## 5. Test with MCP Inspector and a client script
 
