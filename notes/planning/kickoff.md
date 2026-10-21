@@ -1,8 +1,5 @@
 # Project Kickoff: Meeting Action Item Tracker
 
-Date: 2026-10-19
-Attendees: Alex, Priya, Sam
-
 ## Goal
 
 Build a small MCP server that lets an AI agent read meeting notes and save action items. The first version is local only (stdio).

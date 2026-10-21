@@ -1,8 +1,5 @@
 # Design Review: MCP Server Design
 
-Date: 2026-10-26
-Attendees: Alex, Priya, Sam, Jordan
-
 ## What we reviewed
 
 The design doc for the two tools, `read_meeting_note` and `save_action_items`.

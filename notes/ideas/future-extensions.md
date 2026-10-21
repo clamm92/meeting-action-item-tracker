@@ -1,7 +1,4 @@
-# Ideas: Future Extensions
-
-Date: 2026-11-02
-Attendees: Alex, Priya, Sam
+# Ideas: Future Extensions 
 
 ## Ideas after version 1
 

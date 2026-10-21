@@ -8,7 +8,6 @@ def test_reads_normal_note(tmp_path):
     assert result["content"] == "hi"
 
 
-
 def test_reads_subfolder(tmp_path):
     (tmp_path / "planning").mkdir()
     (tmp_path / "planning" / "kickoff.md").write_text("hi")
